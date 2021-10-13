@@ -1,0 +1,227 @@
+// Displays the HUD background
+.hudBackground {
+	position: absolute;
+	left: 50px; // Moves the background across the screens x axis to the left
+	bottom: 50px; // Moves the background across the screens y axis upwards
+	padding: 10px; // Forces the Health Bar 10px from the top of the HUD background
+	background-color: #252525; // Changes the backgrounds color
+	box-shadow: 0 0 5px black; // Adds a blur (shadow) around the background
+	width: 350px;
+	height: 150px;
+	border-radius: 25px;
+}
+
+
+
+// Displays the player preview background
+.playerPreviewBackground {
+	position: absolute;
+	left: 60px; // Moves the background across the screens x axis to the left
+	bottom: 60px; // Moves the background across the screens y axis upwards
+	padding: 10px; // Forces the Health Bar 10px from the top of the HUD background
+	background-color: #323232; // Changes the backgrounds color
+	width: 120px;
+	height: 130px;
+	border-radius: 15px;
+}
+
+
+
+// Red health bar background
+.healthBarBackground {
+	width: 200px;
+	height: 10px;
+	background-color: #323232;
+	left: 145px;
+	bottom: -80px;
+	border-radius: 25px;
+}
+
+// Displays the players health in a red bar
+.healthBar {
+	background-color: #ed3939;
+	border-radius: 25px;
+}
+
+.healthText {
+	margin-left: 10px;
+	margin-right: 5px;
+	color: white;
+	text-shadow: 0 0 1px black;
+	font-weight: bold;
+	left: 75px;
+}
+
+
+
+/*.armorBackground {
+    position: absolute;
+    left: 75px;
+    bottom: 100px;
+    padding: 5px;
+    background-color: #323232;
+    box-shadow: 0 0 5px black;
+}*/
+
+// Blue armor bar background
+.armorBarBackground {
+	width: 200px;
+	height: 10px;
+	background-color: #1871e8;
+	bottom: -105px; // Moves the background across the screens y axis upwards
+	left: -20px; // Moves the background across the screens x axis to the left
+	border-radius: 25px;
+}
+
+// Displays the players armor in a blue bar
+.armorBar {
+	background-color: blue;
+	border-radius: 25px;
+}
+
+.armorText {
+	margin-left: 10px;
+	margin-right: 5px;
+	color: white;
+	text-shadow: 0 0 1px black;
+	font-weight: bold;
+	left: 75px;
+}
+
+Health
+{
+	position: absolute;
+	background-color: rgba( black, 0.5 );
+	right: 100px;
+	bottom: 48px;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	height: 80px;
+	padding: 0 20px;
+	align-items: center;
+}
+
+CurrentTool
+{
+	position: absolute;
+	background: linear-gradient(to right, rgba(black, 0.5), rgba(black, 0.0));
+	top: 100px;
+	left: 0px;
+	padding: 30px 70px;
+	flex-direction: column;
+	width: 560px;
+	opacity: 0.0;
+
+	&.active
+	{
+		opacity: 1.0;
+	}
+
+	.title
+	{
+		font-size: 50px;
+		font-weight: bold;
+		text-shadow: 4px 4px 10px rgba( black, 0.3 );
+		color: white;
+	}
+
+	.description
+	{
+		padding-top: 5px;
+		padding-left: 10px;
+		font-size: 18px;
+		font-weight: normal;
+		text-shadow: 2px 2px 5px rgba( black, 0.3 );
+		color: white;
+		opacity: 0.8;
+	}
+}
+
+rootpanel
+{
+	background-color: rgba( #333, 0 );
+	transition: background-color 0.2s ease-in;
+
+	&.spawnmenuopen
+	{
+		transition: background-color 0.3s ease-out;
+		background-color: rgba( #333, 0.9 );
+	}
+
+
+	&.devcamera
+	{
+		display: none;
+	}
+}
+
+
+InventoryBar
+{
+	position: absolute;
+	width: 100%;
+	bottom: 50px;
+	justify-content: center;
+	align-items: flex-end;
+	border-radius: 25px;
+}
+
+InventoryIcon
+{
+	width: 80px;
+	height: 80px;
+	background-color: rgba( #252525, 0.3 );
+	margin: 0px 2px;
+	position: relative;
+	transition: all 0.2s ease-in-out;
+	margin-top: 10px;
+	font-family: poppins;
+	border-radius: 25px;
+
+	.item-name
+	{
+		padding: 5px;
+		color: white;
+		text-align: center;
+		left: 0;
+		right: 0;
+		font-size: 10px;
+		position: absolute;
+		bottom: 0;
+		opacity: 0.7;
+		transition: all 0.5s ease-in-out;
+		text-shadow: 1px 1px 5px black;
+	}
+
+	.slot-number
+	{
+		font-size: 25px;
+		color: black;
+		font-weight: 900;
+		opacity: 0.3;
+		position: absolute;
+		top: 1px;
+		right: 5px;
+	}
+
+	&.active
+	{
+		background-color: rgba( #323232, 0.5 );
+		transition: all 0.1s ease-out;
+		width: 100px;
+		height: 100px;
+
+		.slot-number
+		{
+			color: #275576;
+		}
+
+		.item-name
+		{
+			opacity: 1;
+			transition: all 0.1s ease-out;
+			font-size: 13px;
+		}
+	}
+}

@@ -23,7 +23,7 @@
 			"m_bPassThroughToCompiledVtex" "bool" "0"
 			"m_n3DSliceCount" "int" "54"
 			"m_n3DSliceWidth" "int" "128"
-			"m_n3DSliceHeight" "int" "12"
+			"m_n3DSliceHeight" "int" "52"
 		}
 	]
 	"m_outputTypeString" "string" "3D"

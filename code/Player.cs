@@ -75,6 +75,7 @@ partial class SandboxPlayer : Player
 		Inventory.Add( new Fists() );
 		Inventory.Add( new cl0() );
 		Inventory.Add( new Flashlight() );
+		Inventory.Add( new Keycard_CL5() );
 
 		base.Respawn();
 	}
